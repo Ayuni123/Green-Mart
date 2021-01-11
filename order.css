@@ -1,0 +1,49 @@
+.container{
+    width:650px;
+    margin: auto;
+    border: 1px  ;
+    padding: 10px;
+    background: rgb(0, 0, 0);
+    color:rgb(0, 0, 0);
+}
+
+h2{
+    text-align: center;
+    text-decoration: bold;
+    color8#86f72a;
+
+}
+
+table{
+    background: #86f72a;
+    margin:auto;
+
+}
+
+td{
+    padding: 10px
+}
+
+input[type=button] {
+box-sizing: border-box;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+background-color: transparent;
+border: 2px solid #86f72a;
+border-radius: 0.6em;
+color: #86f72a;
+cursor: pointer;
+display: flex;
+align-self: center;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1;
+margin: 20px;
+padding: 1em 1.5em;
+text-decoration: none;
+text-align: center;
+text-transform: uppercase;
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+}

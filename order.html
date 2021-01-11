@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ORDER</title>
+	<link rel=stylesheet href="style.css" type="text/css">
+        <link rel=stylesheet href="order.css" type="text/css">
+    </head>
+
+    <body>
+        <div id="menu-kanan">
+            <ul>
+                <li><a href="profile.php">My Profile</a></li>
+                <li><a href="reg.php">Daftar</a></li>
+            </ul>
+        </div>
+        <header>GREEN MART</header>
+        <h4>Your Fresh Market</h4>
+        <div class="menu">
+                <ul>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="#menu">Menu</a>
+                        <ul>
+					        <li><a href="Ayam Segar.html">Ayam Segar</a></li>
+					        <li><a href="Bayam.html">Bayam</a></li>
+					        <li><a href="Wortel.html">wortel</a></li>
+					        <li><a href="Tempe & Tahu.html">Tempe & Tahu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+        </div>  
+        <br/>
+	<div class="container">
+        <h2>ORDER MAKANAN</h2>
+        </br>
+		<table border="1">
+			<tr>
+				<th>No </th>
+				<th>Judul buku</th>
+				<th>harga</th>
+				<th>jumlah</th>
+			</tr>
+
+			<tr>
+				<th> 1 </th>
+				<th> Ayam Segar </th>
+				<th> Rp. <input type="text" name="harga" id="macarons" size="7" value="50000" readonly></th>
+				<th> Qty :  <input type="number" name="jumlah_macarons" id="harga_macarons" size="7" value="0" onchange="total()"></th>
+			</tr>
+
+			<tr>
+				<th>2</th>
+				<th> Bayam </th>
+				<th> Rp. <input type="text" name="harga" id="bf" size="7" value="10000" readonly></th>
+				<th> Qty : <input type="number" name="jumlah_bf" id="harga_bf" size="7" value="0" onchange="total()"></th>
+			</tr>
+
+			<tr>
+				<th>3</th>
+				<th> Wortel </th>
+				<th> Rp. <input type="text" name="harga" id="c" size="7" value="10000" readonly></th>
+				<th> Qty : <input type="number" name="jumlah_c" id="harga_c" size="7" value="0" onchange="total()"></th>
+            </tr>
+			<tr>
+				<th>4</th>
+				<th> Tempe & Tahu </th>
+				<th> Rp. <input type="text" name="harga" id="mochi" size="7" value="10000" readonly></th>
+				<th> Qty : <input type="number" name="jumlah_mochi" id="harga_mochi" size="7" value="0" onchange="total()"></th>
+			</tr>
+
+            <tr>
+				<th colspan="3" style="text-align:right">Username : </th>
+				<th> <input type="text" name="uname" id="uname" size="40" value="" onchange="total()"></th>
+            </tr>
+            <tr>
+				<th colspan="3" style="text-align:right">Nama : </th>
+				<th> <input type="text" name="nama" id="nama" size="40" value="" onchange="total()"></th>
+            </tr>
+            <tr>
+				<th colspan="3" style="text-align:right">No Hp : </th>
+				<th> <input type="text" name="hp" id="hp" size="40" value="" onchange="total()"></th>
+            </tr>
+            <tr>
+				<th colspan="3" style="text-align:right">Alamat : </th>
+				<th> <input type="text" name="alamat" id="alamat" size="40" value="" onchange="total()"></th>
+            </tr>
+            <tr>
+				<th colspan="3" style="text-align:right">Tanggal Pesan : </th>
+				<th> <input type="DATE" name="uname" id="uname" size="40" value="" onchange="total()"></th>
+            </tr>
+			<tr>
+				<th colspan="3" style="text-align:right">jumlah total</th>
+				<th> Rp : <input type="text" name="total_jumlah" id="total" size="7" value="" readonly></th>
+			</tr>
+		</table>
+		<br><br>
+		<input type="button" onclick="window.print()" value="cetak">
+
+		<script type="text/javascript">
+		function total() {
+		var vamac = 50000 * parseInt(document.getElementById('harga_ayam').value);
+		var vbf = 10000 * parseInt(document.getElementById('harga_bayam').value);
+        var vc = 10000 * parseInt(document.getElementById('harga_wortel').value);
+        var vm = 10000 * parseInt(document.getElementById('harga_tempe').value);
+
+		var jumlah_harga = vamac + vbf + vc + vm;
+
+		document.getElementById('total').value = jumlah_harga;
+		}
+		
+		</script>
+	</div>
+</body>
+</html>
